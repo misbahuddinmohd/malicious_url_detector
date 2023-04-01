@@ -2,7 +2,7 @@
 from flask import Flask, request, jsonify
 # import pickle
 import numpy as np
-
+import sklearn
 import pandas as pd
 import numpy as np
 # import random
