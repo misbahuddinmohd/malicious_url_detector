@@ -2,7 +2,6 @@
 from flask import Flask, request, jsonify
 # import pickle
 import numpy as np
-import sklearn
 import pandas as pd
 import numpy as np
 # import random
@@ -28,6 +27,10 @@ from sklearn.model_selection import train_test_split
 # print(New_predict)
 
 app=Flask(__name__)
+
+@app.route('/')
+def home():
+    return "hello world"
 
 @app.route('/predict',methods=['POST'])
 def predict():
