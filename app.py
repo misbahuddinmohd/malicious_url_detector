@@ -35,7 +35,7 @@ def predict():
 
 
     # Reading data from csv file
-    data = pd.read_csv(r'D:\programming\maliciousUrlDetection\newtemp\urldata.csv')
+    data = pd.read_csv('urldata.csv')
     data.head()
 
     # Labels
