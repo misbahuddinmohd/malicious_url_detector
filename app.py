@@ -11,6 +11,8 @@ app=Flask(__name__)
 @app.route('/')
 def home():
     return "hello world, this is a test"
+    
+vectorizer.tokenizer = makeTokens
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -25,7 +27,7 @@ def predict():
 
     #X_predict = input_query
     # Re-create the vectorizer object with the same tokenizer function
-    vectorizer.tokenizer = makeTokens
+    
 
     # Vectorize the new URLs using the loaded vectorizer
     X_predict = vectorizer.transform(input_query)
